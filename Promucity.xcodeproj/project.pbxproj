@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8ABEC258A76C2FA25EBBB0CD /* Pods_Promucity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0200D36F6562888AC33A6FE1 /* Pods_Promucity.framework */; };
+		CD0A46FB1F05FB080063604D /* navBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A46FA1F05FB080063604D /* navBar.swift */; };
+		CD1219DF1E820AD2002C92C5 /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1219DE1E820AD2002C92C5 /* customTextField.swift */; };
+		CD12BA811F1ADE6A00DB7B73 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD12BA801F1ADE6A00DB7B73 /* ProfileVC.swift */; };
+		CD2437DF1EB96F8700495875 /* textFieldShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2437DE1EB96F8700495875 /* textFieldShadow.swift */; };
+		CD2437E21EB9751000495875 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2437E11EB9751000495875 /* OpenSans-Light.ttf */; };
+		CD2437E41EB975E200495875 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2437E31EB975E200495875 /* OpenSans-Regular.ttf */; };
+		CD669DCA1E7DFB9900D26093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD669DC91E7DFB9900D26093 /* AppDelegate.swift */; };
+		CD669DCC1E7DFB9900D26093 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD669DCB1E7DFB9900D26093 /* EventsVC.swift */; };
+		CD669DCE1E7DFB9900D26093 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD669DCD1E7DFB9900D26093 /* PostsVC.swift */; };
+		CD669DD11E7DFB9900D26093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD669DCF1E7DFB9900D26093 /* Main.storyboard */; };
+		CD669DD31E7DFB9900D26093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD669DD21E7DFB9900D26093 /* Assets.xcassets */; };
+		CD669DD61E7DFB9900D26093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD669DD41E7DFB9900D26093 /* LaunchScreen.storyboard */; };
+		CD669DDE1E7DFBCE00D26093 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD669DDD1E7DFBCE00D26093 /* GoogleService-Info.plist */; };
+		CD669DE31E7DFD2B00D26093 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD669DE21E7DFD2B00D26093 /* SignInVC.swift */; };
+		CD669DE51E7E03AA00D26093 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD669DE41E7E03AA00D26093 /* OpenSans-Semibold.ttf */; };
+		CD6B05261EF20ACE00E75F14 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B05251EF20ACE00E75F14 /* SettingsVC.swift */; };
+		CDA06F061EF5D7D0008D3AF4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA06F051EF5D7D0008D3AF4 /* DataService.swift */; };
+		CDA06F081EF62163008D3AF4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA06F071EF62163008D3AF4 /* Post.swift */; };
+		CDABC2CA1E81FEE9003103B1 /* shadowClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABC2C91E81FEE9003103B1 /* shadowClass.swift */; };
+		CDABC2CC1E81FF42003103B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABC2CB1E81FF42003103B1 /* Constants.swift */; };
+		CDC211901E8FBF30009DC2F3 /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC2118F1E8FBF30009DC2F3 /* searchBar.swift */; };
+		CDC211921E8FD87C009DC2F3 /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC211911E8FD87C009DC2F3 /* postCell.swift */; };
+		CDC7E9241F16FCDC005BC5E8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7E9231F16FCDC005BC5E8 /* Settings.swift */; };
+		CDE1637D1EE57B4500BA95B6 /* notifsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1637C1EE57B4500BA95B6 /* notifsCell.swift */; };
+		CDE1637F1EE5809300BA95B6 /* NotifsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1637E1EE5809200BA95B6 /* NotifsVC.swift */; };
+		CDE1D8D91EDB9246006DA56D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1D8D81EDB9246006DA56D /* CircleView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0200D36F6562888AC33A6FE1 /* Pods_Promucity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promucity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C689E4CCE2219F3B0A279E /* Pods-Promucity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promucity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Promucity/Pods-Promucity.debug.xcconfig"; sourceTree = "<group>"; };
+		BEE08D5E94D31073280462F8 /* Pods-Promucity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promucity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Promucity/Pods-Promucity.release.xcconfig"; sourceTree = "<group>"; };
+		CD0A46FA1F05FB080063604D /* navBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navBar.swift; sourceTree = "<group>"; };
+		CD1219DE1E820AD2002C92C5 /* customTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
+		CD12BA801F1ADE6A00DB7B73 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		CD2437DE1EB96F8700495875 /* textFieldShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldShadow.swift; sourceTree = "<group>"; };
+		CD2437E11EB9751000495875 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		CD2437E31EB975E200495875 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		CD669DC61E7DFB9900D26093 /* Promucity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promucity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD669DC91E7DFB9900D26093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Promucity/AppDelegate.swift; sourceTree = "<group>"; };
+		CD669DCB1E7DFB9900D26093 /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventsVC.swift; path = Promucity/EventsVC.swift; sourceTree = "<group>"; };
+		CD669DCD1E7DFB9900D26093 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostsVC.swift; path = Promucity/PostsVC.swift; sourceTree = "<group>"; };
+		CD669DD01E7DFB9900D26093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD669DD21E7DFB9900D26093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Promucity/Assets.xcassets; sourceTree = "<group>"; };
+		CD669DD51E7DFB9900D26093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD669DD71E7DFB9900D26093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Promucity/Info.plist; sourceTree = "<group>"; };
+		CD669DDD1E7DFBCE00D26093 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Promucity/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD669DE21E7DFD2B00D26093 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		CD669DE41E7E03AA00D26093 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "Promucity/Open_Sans/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		CD6B05251EF20ACE00E75F14 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		CDA06F051EF5D7D0008D3AF4 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		CDA06F071EF62163008D3AF4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CDABC2C91E81FEE9003103B1 /* shadowClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shadowClass.swift; sourceTree = "<group>"; };
+		CDABC2CB1E81FF42003103B1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CDC2118F1E8FBF30009DC2F3 /* searchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchBar.swift; sourceTree = "<group>"; };
+		CDC211911E8FD87C009DC2F3 /* postCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
+		CDC7E9231F16FCDC005BC5E8 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		CDE1637C1EE57B4500BA95B6 /* notifsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notifsCell.swift; sourceTree = "<group>"; };
+		CDE1637E1EE5809200BA95B6 /* NotifsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifsVC.swift; sourceTree = "<group>"; };
+		CDE1D8D81EDB9246006DA56D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD669DC31E7DFB9900D26093 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ABEC258A76C2FA25EBBB0CD /* Pods_Promucity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B1083AA37EE0438C1CC0A83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0200D36F6562888AC33A6FE1 /* Pods_Promucity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F177CF42F35E7D324C8D9F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97C689E4CCE2219F3B0A279E /* Pods-Promucity.debug.xcconfig */,
+				BEE08D5E94D31073280462F8 /* Pods-Promucity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD2437E01EB974F400495875 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD2437E11EB9751000495875 /* OpenSans-Light.ttf */,
+				CD2437E31EB975E200495875 /* OpenSans-Regular.ttf */,
+				CD669DE41E7E03AA00D26093 /* OpenSans-Semibold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CD669DBD1E7DFB9900D26093 = {
+			isa = PBXGroup;
+			children = (
+				CD669DC81E7DFB9900D26093 /* Promucity */,
+				CD669DC71E7DFB9900D26093 /* Products */,
+				5F177CF42F35E7D324C8D9F5 /* Pods */,
+				1B1083AA37EE0438C1CC0A83 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD669DC71E7DFB9900D26093 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD669DC61E7DFB9900D26093 /* Promucity.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD669DC81E7DFB9900D26093 /* Promucity */ = {
+			isa = PBXGroup;
+			children = (
+				CDA06F041EF5D770008D3AF4 /* Services */,
+				CD669DDF1E7DFC7C00D26093 /* Model */,
+				CD669DE01E7DFC8200D26093 /* View */,
+				CD669DE11E7DFC8700D26093 /* Controller */,
+			);
+			path = Promucity;
+			sourceTree = "<group>";
+		};
+		CD669DDF1E7DFC7C00D26093 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDABC2CB1E81FF42003103B1 /* Constants.swift */,
+				CDA06F071EF62163008D3AF4 /* Post.swift */,
+				CDC7E9231F16FCDC005BC5E8 /* Settings.swift */,
+				CD669DD71E7DFB9900D26093 /* Info.plist */,
+				CD669DDD1E7DFBCE00D26093 /* GoogleService-Info.plist */,
+				CD2437E01EB974F400495875 /* Resources */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CD669DE01E7DFC8200D26093 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDC211911E8FD87C009DC2F3 /* postCell.swift */,
+				CDABC2C91E81FEE9003103B1 /* shadowClass.swift */,
+				CD0A46FA1F05FB080063604D /* navBar.swift */,
+				CD2437DE1EB96F8700495875 /* textFieldShadow.swift */,
+				CDE1D8D81EDB9246006DA56D /* CircleView.swift */,
+				CD1219DE1E820AD2002C92C5 /* customTextField.swift */,
+				CDC2118F1E8FBF30009DC2F3 /* searchBar.swift */,
+				CDE1637C1EE57B4500BA95B6 /* notifsCell.swift */,
+				CD669DCF1E7DFB9900D26093 /* Main.storyboard */,
+				CD669DD41E7DFB9900D26093 /* LaunchScreen.storyboard */,
+				CD669DD21E7DFB9900D26093 /* Assets.xcassets */,
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CD669DE11E7DFC8700D26093 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD669DE21E7DFD2B00D26093 /* SignInVC.swift */,
+				CD669DCB1E7DFB9900D26093 /* EventsVC.swift */,
+				CD669DCD1E7DFB9900D26093 /* PostsVC.swift */,
+				CDE1637E1EE5809200BA95B6 /* NotifsVC.swift */,
+				CD6B05251EF20ACE00E75F14 /* SettingsVC.swift */,
+				CD12BA801F1ADE6A00DB7B73 /* ProfileVC.swift */,
+				CD669DC91E7DFB9900D26093 /* AppDelegate.swift */,
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CDA06F041EF5D770008D3AF4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDA06F051EF5D7D0008D3AF4 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD669DC51E7DFB9900D26093 /* Promucity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD669DDA1E7DFB9900D26093 /* Build configuration list for PBXNativeTarget "Promucity" */;
+			buildPhases = (
+				9112E7B66539804EC631924E /* [CP] Check Pods Manifest.lock */,
+				CD669DC21E7DFB9900D26093 /* Sources */,
+				CD669DC31E7DFB9900D26093 /* Frameworks */,
+				CD669DC41E7DFB9900D26093 /* Resources */,
+				B9EC09465C8ACA15CE1A26A0 /* [CP] Embed Pods Frameworks */,
+				A453F81E24BC0C08C1C75F1E /* [CP] Copy Pods Resources */,
+				CDBB16EC1E87603300728275 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Promucity;
+			productName = Promucity;
+			productReference = CD669DC61E7DFB9900D26093 /* Promucity.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD669DBE1E7DFB9900D26093 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = imdaeshawn;
+				TargetAttributes = {
+					CD669DC51E7DFB9900D26093 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7J32A3366D;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CD669DC11E7DFB9900D26093 /* Build configuration list for PBXProject "Promucity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD669DBD1E7DFB9900D26093;
+			productRefGroup = CD669DC71E7DFB9900D26093 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD669DC51E7DFB9900D26093 /* Promucity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD669DC41E7DFB9900D26093 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2437E21EB9751000495875 /* OpenSans-Light.ttf in Resources */,
+				CD669DD61E7DFB9900D26093 /* LaunchScreen.storyboard in Resources */,
+				CD669DDE1E7DFBCE00D26093 /* GoogleService-Info.plist in Resources */,
+				CD2437E41EB975E200495875 /* OpenSans-Regular.ttf in Resources */,
+				CD669DD31E7DFB9900D26093 /* Assets.xcassets in Resources */,
+				CD669DD11E7DFB9900D26093 /* Main.storyboard in Resources */,
+				CD669DE51E7E03AA00D26093 /* OpenSans-Semibold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9112E7B66539804EC631924E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A453F81E24BC0C08C1C75F1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promucity/Pods-Promucity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9EC09465C8ACA15CE1A26A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promucity/Pods-Promucity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDBB16EC1E87603300728275 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 4cd556ae391d1c5269c93829decd2f31b55b98dd 58a7d59b0ec4e810402176621e38f77a7c5dc371319fef8c4325ef94daca4539";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD669DC21E7DFB9900D26093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD669DCE1E7DFB9900D26093 /* PostsVC.swift in Sources */,
+				CD1219DF1E820AD2002C92C5 /* customTextField.swift in Sources */,
+				CD669DCA1E7DFB9900D26093 /* AppDelegate.swift in Sources */,
+				CD2437DF1EB96F8700495875 /* textFieldShadow.swift in Sources */,
+				CDE1637D1EE57B4500BA95B6 /* notifsCell.swift in Sources */,
+				CD12BA811F1ADE6A00DB7B73 /* ProfileVC.swift in Sources */,
+				CD6B05261EF20ACE00E75F14 /* SettingsVC.swift in Sources */,
+				CDE1637F1EE5809300BA95B6 /* NotifsVC.swift in Sources */,
+				CDC7E9241F16FCDC005BC5E8 /* Settings.swift in Sources */,
+				CD669DE31E7DFD2B00D26093 /* SignInVC.swift in Sources */,
+				CDC211901E8FBF30009DC2F3 /* searchBar.swift in Sources */,
+				CD669DCC1E7DFB9900D26093 /* EventsVC.swift in Sources */,
+				CDE1D8D91EDB9246006DA56D /* CircleView.swift in Sources */,
+				CDABC2CA1E81FEE9003103B1 /* shadowClass.swift in Sources */,
+				CDABC2CC1E81FF42003103B1 /* Constants.swift in Sources */,
+				CDA06F081EF62163008D3AF4 /* Post.swift in Sources */,
+				CD0A46FB1F05FB080063604D /* navBar.swift in Sources */,
+				CDC211921E8FD87C009DC2F3 /* postCell.swift in Sources */,
+				CDA06F061EF5D7D0008D3AF4 /* DataService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD669DCF1E7DFB9900D26093 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD669DD01E7DFB9900D26093 /* Base */,
+			);
+			name = Main.storyboard;
+			path = Promucity;
+			sourceTree = "<group>";
+		};
+		CD669DD41E7DFB9900D26093 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD669DD51E7DFB9900D26093 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = Promucity;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD669DD81E7DFB9900D26093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD669DD91E7DFB9900D26093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD669DDB1E7DFB9900D26093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97C689E4CCE2219F3B0A279E /* Pods-Promucity.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7J32A3366D;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Promucity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imdaeshawn.Promucity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CD669DDC1E7DFB9900D26093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEE08D5E94D31073280462F8 /* Pods-Promucity.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7J32A3366D;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Promucity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imdaeshawn.Promucity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD669DC11E7DFB9900D26093 /* Build configuration list for PBXProject "Promucity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD669DD81E7DFB9900D26093 /* Debug */,
+				CD669DD91E7DFB9900D26093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD669DDA1E7DFB9900D26093 /* Build configuration list for PBXNativeTarget "Promucity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD669DDB1E7DFB9900D26093 /* Debug */,
+				CD669DDC1E7DFB9900D26093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD669DBE1E7DFB9900D26093 /* Project object */;
+}
