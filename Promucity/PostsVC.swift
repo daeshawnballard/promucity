@@ -43,9 +43,9 @@ class PostsVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDel
     //declaring variables
     var imagePicker: UIImagePickerController!
     var photoSelected = false
-    var postedByRef: FIRDatabaseReference!
-    var usersPostsRef: FIRDatabaseReference!
-    let currentUser = FIRAuth.auth()?.currentUser?.uid
+    var postedByRef: DatabaseReference!
+    var usersPostsRef: DatabaseReference!
+    let currentUser = Auth.auth().currentUser?.uid
     
     
     
@@ -121,11 +121,11 @@ class PostsVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDel
         //uploading the image to firebase, adding metadata and compressing it
         if let postedPhotoData = UIImageJPEGRepresentation(postedPhoto, 0.2) {
             let postedPhotoUid = NSUUID().uuidString
-            let metaData = FIRStorageMetadata()
+            let metaData = StorageMetadata()
             metaData.contentType = "image/jpeg"
             
             
-            DataService.ds.REF_POST_IMAGES.child(postedPhotoUid).put(postedPhotoData, metadata: metaData) { (metaData, error) in
+            DataService.ds.REF_POST_IMAGES.child(postedPhotoUid).putData(postedPhotoData, metadata: metaData) { (metaData, error) in
                 if error != nil {
                     print("Unable to upload image to Firebase storage")
                 } else {

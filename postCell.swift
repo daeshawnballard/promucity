@@ -25,9 +25,9 @@ class postCell: UITableViewCell {
     
     //setting the postcell up, what we will see in the feed
     var post: Post!
-    var currentUser = FIRAuth.auth()?.currentUser?.uid
+    var currentUser = Auth.auth().currentUser?.uid
    // var user: Settings!
-    var likesRef: FIRDatabaseReference!
+    var likesRef: DatabaseReference!
     
     
     override func awakeFromNib() {
@@ -55,8 +55,8 @@ class postCell: UITableViewCell {
         if img != nil{
             self.eventPostImg.image = img
         } else {
-            let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
-            ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error ) in
+            let ref = Storage.storage().reference(forURL: post.imageUrl)
+            ref.getData(maxSize: 2 * 1024 * 1024, completion: {(data, error ) in
                 if error != nil {
                     print("Unable to download image from Firebase storage")
                 } else {

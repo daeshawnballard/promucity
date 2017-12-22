@@ -41,7 +41,7 @@ class SignInVC: UIViewController {
     //Logging in with Email and Password
     @IBAction func signInTapped(_ sender: Any) {
         if let email = emailField.text, let password = passwordField.text {
-            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     print("Email user authenticated with Firebase")
                     if let user = user {
@@ -49,7 +49,7 @@ class SignInVC: UIViewController {
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             let alert = UIAlertController(title: "Username/Password Invalid", message: "Please make sure both your username and password are correct", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title:"OK", style: .cancel, handler: nil))
@@ -80,7 +80,7 @@ class SignInVC: UIViewController {
                 print ("User cancelled Facebook authentication")
             } else {
                 print ("Successfully authenticated with Facebook")
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
             }
         }
@@ -90,11 +90,11 @@ class SignInVC: UIViewController {
     //Logging in with Twitter
     @IBAction func twitterBtnTapped(_ sender: Any) {
         
-        Twitter.sharedInstance().logIn { session, error in
+        TWTRTwitter.sharedInstance().logIn { session, error in
             if (session != nil) {
                 print("signed in as \(String(describing: session?.userName))");
                 
-                let credential = FIRTwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
+                let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
                 self.firebaseAuth(credential)
                 
             } else {
@@ -105,8 +105,8 @@ class SignInVC: UIViewController {
     
     
     //Authenticating with Firebase
-    func firebaseAuth(_ credential: FIRAuthCredential) {
-        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+    func firebaseAuth(_ credential: AuthCredential) {
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
             if error != nil {
                 print(" Unable to authenticate with Firebase - \(String(describing: error))")
             } else {

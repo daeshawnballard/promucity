@@ -50,7 +50,7 @@ class EventsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     func loadFeed(){
         //this service is pulling from the feed data model in firebase constantly
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {

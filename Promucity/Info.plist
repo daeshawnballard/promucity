@@ -4,25 +4,6 @@
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Access to photos is required for posting</string>
-	<key>Fabric</key>
-	<dict>
-		<key>APIKey</key>
-		<string>4cd556ae391d1c5269c93829decd2f31b55b98dd</string>
-		<key>Kits</key>
-		<array>
-			<dict>
-				<key>KitInfo</key>
-				<dict>
-					<key>consumerKey</key>
-					<string>ZQPzYmiEyRSG25ZXFxrfxqVUh</string>
-					<key>consumerSecret</key>
-					<string>dpwScrYsMts3u7fgwxxyskzQPS2KOgVl5udChdcaMY2k0DBOoE</string>
-				</dict>
-				<key>KitName</key>
-				<string>Twitter</string>
-			</dict>
-		</array>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

@@ -22,7 +22,7 @@ class Settings {
     private var _instagramURL: String!
     private var _twitterURL: String!
     private var _usersKey: String!
-    private var _usersRef: FIRDatabaseReference!
+    private var _usersRef: DatabaseReference!
     
 
     var profileImgUrl: String {

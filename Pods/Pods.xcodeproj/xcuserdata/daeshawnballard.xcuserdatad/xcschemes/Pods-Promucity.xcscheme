@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "51EBE251E8242EBF210B94DFA2BE3C0D"
+               BlueprintIdentifier = "294E7AD1661B4DB0F4D7D5A3CA09ED01"
                BuildableName = "Pods_Promucity.framework"
                BlueprintName = "Pods-Promucity"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51EBE251E8242EBF210B94DFA2BE3C0D"
+            BlueprintIdentifier = "294E7AD1661B4DB0F4D7D5A3CA09ED01"
             BuildableName = "Pods_Promucity.framework"
             BlueprintName = "Pods-Promucity"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -130,11 +130,11 @@ class SettingsVC: UIViewController, UITextFieldDelegate, UIImagePickerController
     //uploading the image to firebase, adding metadata and compressing it
     if let profilePhotoData = UIImageJPEGRepresentation(profilePhoto, 0.2) {
         let profilePhotoUid = NSUUID().uuidString
-        let metaData = FIRStorageMetadata()
+        let metaData = StorageMetadata()
         metaData.contentType = "image/jpeg"
         
         
-        DataService.ds.REF_PROFILE_IMAGES.child(profilePhotoUid).put(profilePhotoData, metadata: metaData) { (metaData, error) in
+        DataService.ds.REF_PROFILE_IMAGES.child(profilePhotoUid).putData(profilePhotoData, metadata: metaData) { (metaData, error) in
             if error != nil {
                 print("Unable to upload image to Firebase storage")
             } else {
@@ -180,7 +180,7 @@ class SettingsVC: UIViewController, UITextFieldDelegate, UIImagePickerController
     @IBAction func logOut(_ sender: Any) {
         let keychainResults: Bool = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("Data removed from keychain \(keychainResults)")
-        try! FIRAuth.auth()?.signOut()
+        try! Auth.auth().signOut()
         performSegue(withIdentifier: "logOut", sender: nil)
     }
 

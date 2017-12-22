@@ -28,7 +28,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var facebookButtonURL: String!
     var websiteButtonURL: String!
     var url: URL!
-    let currentUser = FIRAuth.auth()?.currentUser?.uid
+    let currentUser = Auth.auth().currentUser?.uid
     let usersLikes = DataService.ds.REF_USER_CURRENT.child("likes")
     
     //setting the container for the post that will show in the feed
@@ -55,12 +55,12 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.posts.removeAll()
         
         DataService.ds.REF_USER_CURRENT.child("likes").observe(.value, with: { (snapshotlikes) in
-            if let snapshotlikes = snapshotlikes.children.allObjects as? [FIRDataSnapshot] {
+            if let snapshotlikes = snapshotlikes.children.allObjects as? [DataSnapshot] {
                 for snaps in snapshotlikes {
                     if snaps.key != nil {
                         
                         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-                            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                                 for snap in snapshot {
                                     print("SNAP: \(snap)")
                                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
@@ -102,7 +102,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
         DataService.ds.REF_POSTS.queryOrdered(byChild: "postedBy").queryEqual(toValue: currentUser).observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
@@ -149,8 +149,8 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if img != nil {
                     self.profilePhoto.image = img
                 } else {
-                    let ref = FIRStorage.storage().reference(forURL: (snapShot["profileImgUrl"] as? String)!)
-                    ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error ) in
+                    let ref = Storage.storage().reference(forURL: (snapShot["profileImgUrl"] as? String)!)
+                    ref.getData(maxSize: 2 * 1024 * 1024, completion: {(data, error ) in
                         if error != nil {
                             print("Unable to download image from Firebase storage")
                         } else {
@@ -168,8 +168,8 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if img2 != nil {
                     self.profileBackgroundPhoto.image = img2
                 } else {
-                    let ref = FIRStorage.storage().reference(forURL: (snapShot["profileImgUrl"] as? String)!)
-                    ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error ) in
+                    let ref = Storage.storage().reference(forURL: (snapShot["profileImgUrl"] as? String)!)
+                    ref.getData(maxSize: 2 * 1024 * 1024, completion: {(data, error ) in
                         if error != nil {
                             print("Unable to download image from Firebase storage")
                         } else {
