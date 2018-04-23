@@ -1,0 +1,126 @@
+{
+  "posts" : {
+    "-KrSiFQJscOrgPjsCPNd" : {
+      "artist" : "And",
+      "caption" : "Write post description",
+      "city" : "here",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/post-pics%2F07D55801-82E8-4432-9A32-4CF671F61854?alt=media&token=be65513c-c1cf-45c2-a1f5-08eed17fb93a",
+      "likes" : 5,
+      "postedBy" : "ecjvTSDwtFelt2jZ3jNF9R7T7Qf2",
+      "venue" : "here"
+    },
+    "-KrSjvsjIzVy0xkOV1Df" : {
+      "artist" : "2chainz",
+      "caption" : "Write post description",
+      "city" : "here",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/post-pics%2F9CC5A189-CE97-4660-BD9E-A5C536638460?alt=media&token=f1edfe59-4d6a-45bc-9638-48a243ede54a",
+      "likes" : 0,
+      "postedBy" : "ecjvTSDwtFelt2jZ3jNF9R7T7Qf2",
+      "venue" : "here"
+    },
+    "-KrWRFJs3lpmnA9rn-s_" : {
+      "artist" : "Test",
+      "caption" : "Write post description",
+      "city" : "test",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/post-pics%2FB4AE6BFB-4389-4EC8-9721-59FE19395AE4?alt=media&token=621ac5b4-f240-448c-84a3-362c920ede33",
+      "likes" : 6,
+      "postedBy" : "GJWFLRdE1CcmImI7n2NVmTsbCiR2",
+      "venue" : "test"
+    },
+    "-KrYXc-NVn93Sxl3g1jR" : {
+      "artist" : "Nas",
+      "caption" : "Nas will be at the ",
+      "city" : "here",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/post-pics%2F782BB13A-4C95-4A49-A207-2AD80ECFC677?alt=media&token=a3b42e4c-7811-4f51-95c6-bc93b520d95e",
+      "likes" : 0,
+      "postedBy" : "ecjvTSDwtFelt2jZ3jNF9R7T7Qf2",
+      "venue" : "here"
+    },
+    "-KrglaWmZ5q-DOhHYdnE" : {
+      "artist" : "J",
+      "caption" : "Write post description",
+      "city" : "h",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/post-pics%2FA88F357E-5253-4E38-A40D-BB5F2198FA56?alt=media&token=a39d6555-d3be-4cc7-bfef-f1579bed2eb7",
+      "likes" : 0,
+      "postedBy" : "ecjvTSDwtFelt2jZ3jNF9R7T7Qf2",
+      "venue" : "y"
+    },
+    "-KrkhHxP2P45jOK-T7Cm" : {
+      "artist" : "GH",
+      "caption" : "Write post description",
+      "city" : "GH",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/post-pics%2FDEF6123F-C820-4EF6-9EEE-89FFA97B080C?alt=media&token=f559d2de-d406-4bfc-a988-7aa10208b8e1",
+      "likes" : 1,
+      "postedBy" : "ecjvTSDwtFelt2jZ3jNF9R7T7Qf2",
+      "venue" : "ggg"
+    },
+    "-Krpv7QfVbLn84KQupeK" : {
+      "artist" : "Dhaka",
+      "caption" : "Write post description",
+      "city" : "djcjckx",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/post-pics%2FADB9DC3D-81BB-4F82-8DB6-38E78E4A8F0C?alt=media&token=7a3b4ec0-48fa-4cc8-968e-ed211d56cdc5",
+      "likes" : 0,
+      "postedBy" : "A97LqGqJpXcLemZQSrdrXGTioSz2",
+      "venue" : "ekdkdx"
+    }
+  },
+  "users" : {
+    "79svYiVQ9WUDO2QwfuUhtZCRrZh1" : {
+      "provider" : "Firebase",
+      "settings" : {
+        "bio" : "bio",
+        "displayName" : "Douglas",
+        "facebookURL" : "l;lead",
+        "instagramURL" : ";like",
+        "location" : "here",
+        "profileImgUrl" : "http://...",
+        "twitterURL" : "ok;j",
+        "websiteURL" : "aa"
+      }
+    },
+    "A97LqGqJpXcLemZQSrdrXGTioSz2" : {
+      "likes" : {
+        "-KrSiFQJscOrgPjsCPNd" : true
+      },
+      "provider" : "Firebase",
+      "settings" : {
+        "bio" : "d",
+        "displayName" : "c",
+        "facebookURL" : "g",
+        "instagramURL" : "c",
+        "location" : "x",
+        "profileImgUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/profile-pics%2FA27B80E6-0221-44D1-9474-FD258F526F32?alt=media&token=b0d5d45d-600d-406f-ad98-46f039395eec",
+        "twitterURL" : "s",
+        "websiteURL" : "s"
+      }
+    },
+    "GJWFLRdE1CcmImI7n2NVmTsbCiR2" : {
+      "likes" : {
+        "-KrSiFQJscOrgPjsCPNd" : true,
+        "-KrSjvsjIzVy0xkOV1Df" : true
+      },
+      "provider" : "facebook.com"
+    },
+    "OM3WlHQ2E1fsVjQ5km1ptrj0Tuk2" : {
+      "provider" : "twitter.com"
+    },
+    "ecjvTSDwtFelt2jZ3jNF9R7T7Qf2" : {
+      "likes" : {
+        "-KrSjvsjIzVy0xkOV1Df" : true,
+        "-KrWRFJs3lpmnA9rn-s_" : true,
+        "-KrkhHxP2P45jOK-T7Cm" : true
+      },
+      "provider" : "Firebase",
+      "settings" : {
+        "bio" : "d",
+        "displayName" : "d",
+        "facebookURL" : "http://facebook.com",
+        "instagramURL" : "http://instagram.com",
+        "location" : "d",
+        "profileImgUrl" : "https://firebasestorage.googleapis.com/v0/b/promucity-aa4d7.appspot.com/o/profile-pics%2FD89F6119-AF53-424D-9EC3-8F73D8E3DD95?alt=media&token=9814bc8e-4685-4e2e-bd1b-20e872a678c5",
+        "twitterURL" : "http://twitter.com",
+        "websiteURL" : "http://YouTube.com"
+      }
+    }
+  }
+}

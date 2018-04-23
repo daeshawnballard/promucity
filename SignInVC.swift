@@ -93,10 +93,8 @@ class SignInVC: UIViewController {
         TWTRTwitter.sharedInstance().logIn { session, error in
             if (session != nil) {
                 print("signed in as \(String(describing: session?.userName))");
-                
                 let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
                 self.firebaseAuth(credential)
-                
             } else {
                 print("error: \(String(describing: error?.localizedDescription))");
             }

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        //Twitter
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"ZQPzYmiEyRSG25ZXFxrfxqVUh", consumerSecret:"dpwScrYsMts3u7fgwxxyskzQPS2KOgVl5udChdcaMY2k0DBOoE")
         
         
         return true
@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool{
         //Facebook login handleing mobile webrequest to open login.
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        //return TWTRTwitter.sharedInstance().application(application, open: url, options: sourceApplication)
     }
 
 }
