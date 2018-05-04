@@ -1,73 +1,59 @@
 PODS:
-  - Bolts (1.8.4):
-    - Bolts/AppLinks (= 1.8.4)
-    - Bolts/Tasks (= 1.8.4)
-  - Bolts/AppLinks (1.8.4):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.8.4)
-  - FacebookCore (0.3.0):
-    - Bolts (~> 1.8)
-    - FBSDKCoreKit (~> 4.27)
-  - FacebookLogin (0.3.0):
-    - Bolts (~> 1.8)
-    - FacebookCore (~> 0.3)
-    - FBSDKCoreKit (~> 4.27)
-    - FBSDKLoginKit (~> 4.27)
-  - FacebookShare (0.3.0):
-    - Bolts (~> 1.8)
-    - FacebookCore (~> 0.3)
-    - FBSDKCoreKit (~> 4.27)
-    - FBSDKShareKit (~> 4.27)
-  - FBSDKCoreKit (4.29.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.29.0):
-    - FBSDKCoreKit
-  - FBSDKShareKit (4.29.0):
-    - FBSDKCoreKit
-  - Firebase/Auth (4.8.0):
+  - Firebase/Auth (4.13.0):
     - Firebase/Core
-    - FirebaseAuth (= 4.4.1)
-  - Firebase/Core (4.8.0):
-    - FirebaseAnalytics (= 4.0.5)
-    - FirebaseCore (= 4.0.13)
-  - Firebase/Database (4.8.0):
+    - FirebaseAuth (= 4.6.1)
+  - Firebase/Core (4.13.0):
+    - FirebaseAnalytics (= 4.2.0)
+    - FirebaseCore (= 4.0.20)
+  - Firebase/Database (4.13.0):
     - Firebase/Core
-    - FirebaseDatabase (= 4.1.3)
-  - Firebase/Storage (4.8.0):
+    - FirebaseDatabase (= 4.1.5)
+  - Firebase/Storage (4.13.0):
     - Firebase/Core
-    - FirebaseStorage (= 2.1.1)
-  - FirebaseAnalytics (4.0.5):
+    - FirebaseStorage (= 2.2.0)
+  - FirebaseAnalytics (4.2.0):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (4.4.1):
-    - FirebaseAnalytics (~> 4.0)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+  - FirebaseAuth (4.6.1):
+    - FirebaseAnalytics (~> 4.2)
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (4.0.13):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseDatabase (4.1.3):
-    - FirebaseAnalytics (~> 4.0)
+  - FirebaseCore (4.0.20):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseDatabase (4.1.5):
+    - FirebaseAnalytics (~> 4.1)
     - FirebaseCore (~> 4.0)
     - leveldb-library (~> 1.18)
-  - FirebaseInstanceID (2.0.8):
+  - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
-  - FirebaseStorage (2.1.1):
-    - FirebaseAnalytics (~> 4.0)
+  - FirebaseStorage (2.2.0):
+    - FirebaseAnalytics (~> 4.1)
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleToolboxForMac/DebugUtils (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/Defines (2.1.3)
-  - GoogleToolboxForMac/NSData+zlib (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
-  - GTMSessionFetcher/Core (1.1.12)
+  - GoogleSignIn (4.1.2):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMOAuth2 (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
+    - GoogleToolboxForMac/DebugUtils (= 2.1.4)
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
+  - GTMOAuth2 (1.1.6):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.15):
+    - GTMSessionFetcher/Full (= 1.1.15)
+  - GTMSessionFetcher/Core (1.1.15)
+  - GTMSessionFetcher/Full (1.1.15):
+    - GTMSessionFetcher/Core (= 1.1.15)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -75,44 +61,48 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SwiftKeychainWrapper (3.0.1)
-  - TwitterCore (3.1.0)
-  - TwitterKit (3.3.0):
-    - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
-  - FacebookCore
-  - FacebookLogin
-  - FacebookShare
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - GoogleSignIn
   - SwiftKeychainWrapper
-  - TwitterKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - FirebaseStorage
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMOAuth2
+    - GTMSessionFetcher
+    - leveldb-library
+    - nanopb
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
-  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
-  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
-  FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
-  FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
-  FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
-  FBSDKShareKit: 18a2cd118aef11dd657fe7e8b64bae5c719088b2
-  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
-  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
-  FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
-  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
-  FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
-  FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
-  FirebaseStorage: ab08d1c93a2feffa038fdd6693088b310ab1e6c6
-  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
-  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
+  FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
+  FirebaseAuth: bf22cacf22c60ab454bf2636f556d8892b10b53f
+  FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
+  FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
+  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebaseStorage: 0c223481c8f89ed300cf1239ddd2d9833622c65f
+  GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
-  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
-  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 5b9241750e7a5e7deaf21a5d21eadf6794c0fb54
+PODFILE CHECKSUM: 281c06df75bf446db0e11fd50acdcab641410b8a
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0

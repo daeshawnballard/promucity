@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+  # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
 
 target 'Promucity' do
@@ -10,10 +10,7 @@ target 'Promucity' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
-  pod 'FacebookShare'
   pod 'SwiftKeychainWrapper'
-  pod 'TwitterKit'
-
+  pod 'GoogleSignIn'
 end
+
