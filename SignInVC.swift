@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 import Firebase
+import GoogleSignIn
 import SwiftKeychainWrapper
-import TwitterKit
 
-class SignInVC: UIViewController {
+
+class SignInVC: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -21,7 +20,7 @@ class SignInVC: UIViewController {
     
     // Switch between textfields and hide keyboard. Set IBOutlets, delegates and this function.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailField{
+        if textField == emailField {
             passwordField.becomeFirstResponder()
         } else {
             passwordField.resignFirstResponder()
@@ -34,6 +33,7 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
        
         //nothing here
+        GIDSignIn.sharedInstance().uiDelegate = self
         
         }
  
@@ -68,38 +68,42 @@ class SignInVC: UIViewController {
         }
     }
     
-    
-    //Logging in with Facebook
-    @IBAction func facebookBtnTapped(_ sender: Any) {
-        let facebookLogin = FBSDKLoginManager()
-        
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
-            if error != nil {
-                print("Unable to authenticate with Facebook - \(String(describing: error))")
-            } else if result?.isCancelled == true {
-                print ("User cancelled Facebook authentication")
-            } else {
-                print ("Successfully authenticated with Facebook")
-                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.firebaseAuth(credential)
-            }
-        }
+    @IBAction func googleBtnTapped(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+        print("hi")
     }
     
-    
-    //Logging in with Twitter
-    @IBAction func twitterBtnTapped(_ sender: Any) {
-        
-        TWTRTwitter.sharedInstance().logIn { session, error in
-            if (session != nil) {
-                print("signed in as \(String(describing: session?.userName))");
-                let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
-                self.firebaseAuth(credential)
-            } else {
-                print("error: \(String(describing: error?.localizedDescription))");
-            }
-        }
-    }
+//    //Logging in with Facebook
+//    @IBAction func facebookBtnTapped(_ sender: Any) {
+//        let facebookLogin = FBSDKLoginManager()
+//
+//        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+//            if error != nil {
+//                print("Unable to authenticate with Facebook - \(String(describing: error))")
+//            } else if result?.isCancelled == true {
+//                print ("User cancelled Facebook authentication")
+//            } else {
+//                print ("Successfully authenticated with Facebook")
+//                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+//                self.firebaseAuth(credential)
+//            }
+//        }
+//    }
+//
+//
+//    //Logging in with Twitter
+//    @IBAction func twitterBtnTapped(_ sender: Any) {
+//
+//        TWTRTwitter.sharedInstance().logIn { session, error in
+//            if (session != nil) {
+//                print("signed in as \(String(describing: session?.userName))");
+//                let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
+//                self.firebaseAuth(credential)
+//            } else {
+//                print("error: \(String(describing: error?.localizedDescription))");
+//            }
+//        }
+//    }
     
     
     //Authenticating with Firebase
@@ -123,7 +127,7 @@ class SignInVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
             performSegue(withIdentifier: "goToFeed", sender: nil)
-                    }
+        }
     }
     
     
