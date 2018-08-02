@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import SwiftKeychainWrapper
+//import SwiftKeychainWrapper
 
 class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -22,8 +22,8 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var profileTableView: UITableView!
     @IBOutlet weak var profileBackgroundPhoto: UIImageView!
     @IBOutlet weak var profilePhoto: UIImageView!
-    // variables
     
+    // variables
     var settings: Settings!
     var facebookButtonURL: String!
     var websiteButtonURL: String!
@@ -53,11 +53,17 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // This is allowing the user to see only their liked post on their profile
     @IBAction func likesButtonTapped(_ sender: Any) {
         self.posts.removeAll()
+        loadUsersLikes()
+        
+    }
+    
+    // This is allowing the user to see only their liked post on their profile
+    func loadUsersLikes() {
         
         DataService.ds.REF_USER_CURRENT.child("likes").observe(.value, with: { (snapshotlikes) in
             if let snapshotlikes = snapshotlikes.children.allObjects as? [DataSnapshot] {
                 for snaps in snapshotlikes {
-                    if snaps.key != nil {
+                    //if snaps.key != nil {
                         
                         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
                             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
@@ -78,30 +84,30 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                 }
                             }
                             //updating for new info
+                            //self.posts.removeAll()
                             self.profileTableView.reloadData()
+                        
                         })
-                    } else {
-                        self.posts.removeAll()
+                    //} else {
                         //alert no favorites..
-                    }
+                       // self.posts.removeAll()
+                   // }
                     
                 }
             }
         })
     }
     
-    
     // This is allowing a user to see only the post that they've made on their profile
     @IBAction func myEventsButtonTapped(_ sender: Any) {
+      loadUsersPosts()
         self.posts.removeAll()
-        loadUsersPosts()
     }
     
     // This is allowing a user to see only the post that they've made on their profile
     func loadUsersPosts() {
         
-        
-        DataService.ds.REF_POSTS.queryOrdered(byChild: "postedBy").queryEqual(toValue: currentUser).observe(.value, with: { (snapshot) in
+        DataService.ds.REF_POSTS.queryOrdered(byChild: "usersPosts").queryEqual(toValue: currentUser).observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -134,8 +140,8 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // this function is listening for the firebase data changes for settings and updating the profile view
     func updateProfile(img: UIImage? = nil, img2: UIImage? = nil) {
-        DataService.ds.REF_USER_CURRENT.child("settings").observeSingleEvent(of: .value, with: { (fbSnap) in
-            if let snapShot = fbSnap.value as? Dictionary<String, AnyObject> {
+        DataService.ds.REF_USER_CURRENT.child("settings").observeSingleEvent(of: .value, with: { (settingsSnap) in
+            if let snapShot = settingsSnap.value as? Dictionary<String, AnyObject> {
                 self.profileName.text = snapShot["displayName"] as? String
                 self.profileBio.text = snapShot["bio"] as? String
                 self.profileLocation.text = snapShot["location"] as? String
@@ -144,8 +150,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.profileTwitter.text = snapShot["twitterURL"] as? String
                 self.profileInstagram.text = snapShot["instagramURL"] as? String
                 
-//                profilePictureImg
-//
+//              profilePictureImg
                 if img != nil {
                     self.profilePhoto.image = img
                 } else {
@@ -164,7 +169,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                         }
                     })
                 }
-                
+            
                 if img2 != nil {
                     self.profileBackgroundPhoto.image = img2
                 } else {
@@ -206,7 +211,6 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     // User profile feed table view code
-    
     func numberOfSections(in profileTableView: UITableView) -> Int {
         //this is returning one column for our feed
         return 1
@@ -214,17 +218,18 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ profileTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //this is saying, however many post there are, show them
+        print(posts.count)
         return posts.count
+        
     }
     
     func tableView(_ profileTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //this method is allowing us to put the container "post" into our feed. and caches it
+        //this method is allowing us to put the container "post" into our feed. and caches it at it's postion
         let post = posts[indexPath.row]
         
         if let cell = profileTableView.dequeueReusableCell(withIdentifier: "postCell") as? postCell {
-            
-            if let img = EventsVC.imageCache.object(forKey: post.imageUrl as NSString) {
-                cell.configureCell(post: post, img: img)
+            if let img = EventsVC.imageCache.object(forKey: post.imageUrl as NSString), let profileImg = EventsVC.imageCache.object(forKey: post.profilePhotoUrl as NSString) {
+                cell.configureCell(post: post, img: img, profileImg: profileImg)
             } else {
                 cell.configureCell(post: post)
             }
@@ -236,7 +241,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 }
 
 
-
+//figure out why the index is going out of range. If there aren't any likes, the cells aren't being removed.
 
 
 

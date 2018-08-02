@@ -6,7 +6,7 @@
 //  Copyright © 2017 imdaeshawn. All rights reserved.
 //
 
-//FINSISH SETTING UP THIS DATA MODEL AND SEE IF IT WORKS
+//FINSISH SETTING UP THIS DATA MODEL AND SEE IF IT WORKS - DONE, it works!
 
 import Foundation
 import Firebase

@@ -31,12 +31,11 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        //nothing here
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         
-        }
- 
+    }
+    
     
     //Logging in with Email and Password
     @IBAction func signInTapped(_ sender: Any) {
@@ -58,7 +57,7 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
                         } else {
                             print("Successfully autthenticated with Firebase")
                             if let user = user {
-                                   let userData = ["provider": user.providerID]
+                                let userData = ["provider": user.providerID]
                                 self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
@@ -70,40 +69,8 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func googleBtnTapped(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
-        print("hi")
     }
     
-//    //Logging in with Facebook
-//    @IBAction func facebookBtnTapped(_ sender: Any) {
-//        let facebookLogin = FBSDKLoginManager()
-//
-//        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
-//            if error != nil {
-//                print("Unable to authenticate with Facebook - \(String(describing: error))")
-//            } else if result?.isCancelled == true {
-//                print ("User cancelled Facebook authentication")
-//            } else {
-//                print ("Successfully authenticated with Facebook")
-//                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-//                self.firebaseAuth(credential)
-//            }
-//        }
-//    }
-//
-//
-//    //Logging in with Twitter
-//    @IBAction func twitterBtnTapped(_ sender: Any) {
-//
-//        TWTRTwitter.sharedInstance().logIn { session, error in
-//            if (session != nil) {
-//                print("signed in as \(String(describing: session?.userName))");
-//                let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
-//                self.firebaseAuth(credential)
-//            } else {
-//                print("error: \(String(describing: error?.localizedDescription))");
-//            }
-//        }
-//    }
     
     
     //Authenticating with Firebase
@@ -120,8 +87,7 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
                 }
             }
         })
-    }
-    
+    }    
     
     //if the login is entered correctly, go into the app
     override func viewDidAppear(_ animated: Bool) {
@@ -134,7 +100,7 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
     //This performs the segue to the feed if the login has been previously saved
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-       let keychainResults = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        let keychainResults = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Data saved to keychain \(keychainResults)")
         performSegue(withIdentifier: "goToFeed", sender: nil)
         

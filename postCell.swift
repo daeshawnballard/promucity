@@ -26,7 +26,6 @@ class postCell: UITableViewCell {
     //setting the postcell up, what we will see in the feed
     var post: Post!
     var currentUser = Auth.auth().currentUser?.uid
-   // var user: Settings!
     var likesRef: DatabaseReference!
     
     
@@ -42,16 +41,17 @@ class postCell: UITableViewCell {
     }
     
     // this is showing what elements of the post container we will be using/seeing and pulling in data for
-    func configureCell(post: Post, img: UIImage? = nil) {
+    func configureCell(post: Post, img: UIImage? = nil, profileImg: UIImage? = nil) {
         self.post = post
 
         likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
-       // self.eventPostUserNameLbl.text = "\(DataService.ds.REF_USER_CURRENT.child("settings").child(user.displayName))"
+        self.eventPostUserNameLbl.text = post.postedBy
         self.eventPostDesTV.text = post.caption
         self.eventPostPerformerLbl.text = post.artist
         self.eventPostLocationLbl.text = "\(post.venue) - \(post.city)"
         self.eventPostLikeLbl.text = "\(post.likes)"
         
+        //setting the user's post image in the post on the feed
         if img != nil{
             self.eventPostImg.image = img
         } else {
@@ -71,6 +71,26 @@ class postCell: UITableViewCell {
             })
         }
         
+        //setting the user's profile image in their post on the feed
+        if profileImg != nil {
+            self.eventPostUserProfileImg.image = profileImg
+        } else {
+            let profileRef = Storage.storage().reference(forURL: post.profilePhotoUrl)
+            profileRef.getData(maxSize: 2 * 1024 * 1024, completion: {(data, error ) in
+                if error != nil {
+                    print("Unable to download image from Firebase storage")
+                } else {
+                    print("Image downloaded from Firebase storage")
+                    if let profileImgData = data {
+                        if let profileImg = UIImage(data: profileImgData) {
+                            self.eventPostUserProfileImg.image = profileImg
+                            EventsVC.imageCache.setObject(profileImg, forKey: post.profilePhotoUrl as NSString)
+                        }
+                    }
+                }
+            })
+        }
+        
             likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
                 self.eventPostLikeImg.image = UIImage(named: "unLikeImg")
@@ -80,6 +100,7 @@ class postCell: UITableViewCell {
         })
     }
     
+    //executing the like and unlike function
     func likeTapped(sender: UITapGestureRecognizer) {
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
